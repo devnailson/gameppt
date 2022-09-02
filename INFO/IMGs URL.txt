@@ -1,0 +1,4 @@
+LOGO: https://pixabay.com/pt/vectors/pedra-papel-tesoura-jogos-roshambo-156171/
+PAPEL: https://pixabay.com/pt/vectors/pedra-papel-tesoura-papel-m%c3%a3o-gesto-296855/
+PEDRA: https://pixabay.com/pt/vectors/pedra-papel-tesoura-rocha-m%c3%a3o-gesto-296854/
+TESOURA: https://pixabay.com/pt/vectors/pedra-papel-tesoura-tesoura-m%c3%a3o-296853/

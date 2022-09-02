@@ -1,0 +1,5 @@
+#000 preto puro
+#878787 cinza
+#2400A4 azul
+#DBD2FA quase branco
+#8C2020 vermelho

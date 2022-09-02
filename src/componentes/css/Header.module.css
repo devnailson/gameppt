@@ -1,0 +1,37 @@
+*{
+    list-style: none;
+    text-decoration: none;
+}
+.princ{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    background-color: #000;
+    height: 16vh;
+}
+.princ img{
+    background-color: #DBD2FA;
+    border-radius: 2em;
+}
+.princ img:hover{
+    cursor: grab;
+}
+.botoes{
+    display: flex;
+    padding-right: 10px;
+}
+.botoes button{
+    margin-left: 1em;
+    border-radius: 2em;
+    border: groove #DBD2FA;
+    height: 6vh;
+    width: 7vw;
+    font-size: 0.8em;
+}
+.botoes button:hover{
+    cursor: grab;
+    color:#000;
+    background-color: #DBD2FA;
+    border: groove #000000;
+}
