@@ -78,9 +78,15 @@ export default function Game(){
             <div className={style.jogo}>
                 <p>Você:</p>
             <div className={style.jogoi}>
-                <button id='pedra' onClick={()=>Result('pedra')} value='pedra'><img className={style.img} alt="pedra" src={Pedra}/></button>
-                <button id='papel' onClick={()=>Result('papel')} value='papel'><img className={style.img} alt="papel" src={Papel}/></button>
-                <button id='tesoura' onClick={()=>Result('tesoura')} value='tesoura'><img className={style.img} alt="tesoura" src={Tesoura}/></button>                           
+                <button id='pedra' onClick={()=>Result('pedra')}
+                    value='pedra'><img className={style.img} alt="pedra" src={Pedra}/>
+                </button>
+                <button id='papel' onClick={()=>Result('papel')}
+                    value='papel'><img className={style.img} alt="papel" src={Papel}/>
+                </button>
+                <button id='tesoura' onClick={()=>Result('tesoura')}
+                    value='tesoura'><img className={style.img} alt="tesoura" src={Tesoura}/>
+                </button>                           
             </div>
                 <p>COMPUTADOR:</p>
             <div className={style.jogoi}>               
