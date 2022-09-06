@@ -7,7 +7,7 @@ export default function Header(){
         <ul className={style.princ}>
             <li><Link to='/'><img height='60' src={logo} alt='logo_game'/></Link></li>
             <li className={style.botoes}>
-                <Link to='/'><button>Game</button></Link>
+                <Link to='/'><button>Jogo</button></Link>
                 <Link to='/regras'><button>Regras</button></Link>
                 <Link to='/sobre'><button>Sobre</button></Link>
             </li>

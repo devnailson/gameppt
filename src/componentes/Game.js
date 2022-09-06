@@ -2,7 +2,7 @@ import { useState } from 'react'
 import Pedra from '../imgs/pedra.png'
 import Papel from '../imgs/papel.png'
 import Tesoura from '../imgs/tesoura.png'
-import Resultado from '../componentes/Result'
+import Resultado from '../componentes/Resultado'
 
 import style from './css/Game.module.css'
 
@@ -68,8 +68,6 @@ export default function Game(){
         }else if(compt==player){
             setVenc('EMPATE')
         }
-        console.log('player ' + player)
-        console.log('compt ' + compt)
     }
 
     return(
@@ -94,8 +92,7 @@ export default function Game(){
                 <img className={style.img} alt="papel" src={Papel}/>
                 <img className={style.img} alt="tesoura" src={Tesoura}/>
             </div>
-            <h2>{venc}</h2>
-            <Resultado/>
+            <Resultado venc={venc}/>
             </div>
         </div>
     )
