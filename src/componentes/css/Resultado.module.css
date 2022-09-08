@@ -1,7 +1,12 @@
 .princ{
     border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 .princ button{
     color: black;
-    
+    background: none;
+    width: 10em;
 }

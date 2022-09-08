@@ -6,7 +6,7 @@
     max-width: 100vw;
     max-height: 100vh;
 }
-.pag p{
+.p{
     background-color: #1b01782a;
     width: 46vw;
     text-align: center;
@@ -28,7 +28,6 @@
     width: 90vw;
     text-transform: uppercase;
     font-size: 1em;
-
 }
 .jogoi button{
     background: none;

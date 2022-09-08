@@ -36,9 +36,9 @@ export default function Game(){
 
     return(
         <div className={style.pag}>
-            <p>PEDRA - PAPEL - TESOURA</p>
+            <p className={style.p}>PEDRA - PAPEL - TESOURA</p>
             <div className={style.jogo}>
-                <p>Você:</p>
+                <p className={style.p}>Você:</p>
             <div className={style.jogoi}>
                 <button id='pedra' onClick={()=>Result('pedra')}
                     value='pedra'><img className={style.img} alt="pedra" src={Pedra}/>
@@ -50,14 +50,14 @@ export default function Game(){
                     value='tesoura'><img className={style.img} alt="tesoura" src={Tesoura}/>
                 </button>                           
             </div>
-                <p>COMPUTADOR:</p>
+                <p className={style.p}>COMPUTADOR:</p>
             <div className={style.jogoi}>               
                 <img className={style.img} alt="pedra" src={Pedra}/>
                 <img className={style.img} alt="papel" src={Papel}/>
                 <img className={style.img} alt="tesoura" src={Tesoura}/>
             </div>
-            <Resultado player={player} compt={compt} enviar={enviar}/>
             </div>
+            <Resultado player={player} compt={compt} enviar={enviar}/>
         </div>
     )
 }
