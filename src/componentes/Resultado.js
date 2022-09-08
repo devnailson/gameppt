@@ -1,3 +1,5 @@
+import style from './css/Resultado.module.css'
+
 import imgLoading from '../imgs/loading.gif'
 import {useState} from 'react'
 
@@ -19,17 +21,19 @@ function Resultado(props){
             setVenc('compt, tesoura > papel')
         }else if(props.compt=='papel' && props.player=='pedra'){
             setVenc('compt, papel > pedra')
-        }else if(props.compt==props.player){
+        }else if(props.compt==props.player && props.player!=''){
             setVenc('EMPATE')
+        }else{
+            setVenc('')
         }
     }
     
 
     return(
-        <div>
+        <div className={style.princ}>
             {loading?<img src={imgLoading} alt='LOADING...'/>:
-            <button onClick={()=>Calcular()}>aaa</button>
-            }
+            <button onClick={()=>Calcular()}>Calcular</button>
+            } 
             <p>VOCÊ ESCOLHEU: {props.player}</p>
             <p>{venc}</p>
         </div>
