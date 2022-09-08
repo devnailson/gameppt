@@ -8,15 +8,15 @@ import style from './css/Game.module.css'
 
 export default function Game(){
 
-    const [venc, setVenc] = useState('')
-    const [comecou, setComecou]=useState(false)
     const [comptn, setComptn] = useState(0)
     const [compt, setCompt] = useState('')
     const [player, setPlayer] = useState('')
+    
+    const [enviar, setEnviar]=useState(false)
 
-    const Result=(e)=>{
-        setVenc('')
+    function Result(e){
         setComptn(Math.floor(Math.random() * 3 + 1))
+        setEnviar(true)
         if(e=='pedra'){
             setPlayer('pedra')
         }else if(e=='papel'){
@@ -31,26 +31,8 @@ export default function Game(){
         }else{
             setCompt('tesoura')
         }
-        setComecou(true)
-       verifica()
     }
-    function verifica(){
-        if(player=='pedra' && compt=='tesoura'){
-            setVenc('player, pedra > tesoura')
-        }else if(player=='tesoura' && compt=='papel'){
-            setVenc('player, tesoura > papel')
-        }else if(player=='papel' && compt=='pedra'){
-            setVenc('player, papel > pedra')
-        }else if(compt=='pedra' && player=='tesoura'){
-            setVenc('Enemy, pedra > tesoura')
-        }else if(compt=='tesoura' && player=='papel'){
-            setVenc('compt, tesoura > papel')
-        }else if(compt=='papel' && player=='pedra'){
-            setVenc('compt, papel > pedra')
-        }else if(compt==player){
-            setVenc('EMPATE')
-        }
-    }
+    
 
     return(
         <div className={style.pag}>
@@ -74,7 +56,7 @@ export default function Game(){
                 <img className={style.img} alt="papel" src={Papel}/>
                 <img className={style.img} alt="tesoura" src={Tesoura}/>
             </div>
-            <Resultado venc={venc}/>
+            <Resultado player={player} compt={compt} enviar={enviar}/>
             </div>
         </div>
     )

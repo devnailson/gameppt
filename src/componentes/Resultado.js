@@ -1,26 +1,37 @@
 import imgLoading from '../imgs/loading.gif'
 import {useState} from 'react'
 
-function Resultado({venc}){
+function Resultado(props){
 
-    const [rvenc, setRvenc] = useState('oi')
     const [loading, setLoading]=useState(false)
-
-    function func(){
-        setLoading(true)
-        setTimeout(() => {
-            setRvenc(venc)
-            setLoading()
-        }, 1000);
-        
+    const [venc,setVenc]=useState('')
+    
+    function Calcular(){
+        if(props.player=='pedra' && props.compt=='tesoura'){
+            setVenc('player, pedra > tesoura')
+        }else if(props.player=='tesoura' && props.compt=='papel'){
+            setVenc('player, tesoura > papel')
+        }else if(props.player=='papel' && props.compt=='pedra'){
+            setVenc('player, papel > pedra')
+        }else if(props.compt=='pedra' && props.player=='tesoura'){
+            setVenc('Enemy, pedra > tesoura')
+        }else if(props.compt=='tesoura' && props.player=='papel'){
+            setVenc('compt, tesoura > papel')
+        }else if(props.compt=='papel' && props.player=='pedra'){
+            setVenc('compt, papel > pedra')
+        }else if(props.compt==props.player){
+            setVenc('EMPATE')
+        }
     }
+    
 
     return(
         <div>
             {loading?<img src={imgLoading} alt='LOADING...'/>:
-            <p>{rvenc}</p>
+            <button onClick={()=>Calcular()}>aaa</button>
             }
-            <button onClick={()=>func()}>CRICA</button>
+            <p>VOCÊ ESCOLHEU: {props.player}</p>
+            <p>{venc}</p>
         </div>
     )
 }
