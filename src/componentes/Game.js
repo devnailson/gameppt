@@ -32,24 +32,6 @@ export default function Game(){
             setCompt('tesoura')
         }
         setComecou(true)
-        /*if(player=='pedra' && compt=='tesoura'){
-            setVenc('player, pedra > tesoura')
-        }else if(player=='tesoura' && compt=='papel'){
-            setVenc('player, tesoura > papel')
-        }else if(player=='papel' && compt=='pedra'){
-            setVenc('player, papel > pedra')
-        }else if(compt=='pedra' && player=='tesoura'){
-            setVenc('Enemy, pedra > tesoura')
-        }else if(compt=='tesoura' && player=='papel'){
-            setVenc('compt, tesoura > papel')
-        }else if(compt=='papel' && player=='pedra'){
-            setVenc('compt, papel > pedra')
-        }else if(compt==player){
-            setVenc('EMPATE')
-        }
-        console.log('player ' + player)
-        console.log('compt ' + compt)
-        */
        verifica()
     }
     function verifica(){
